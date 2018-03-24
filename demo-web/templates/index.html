@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Загрузить файл</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="text" id="centerLayer" align="center">
+    <h1>Поиск смысловых дубликатов</h1><br>
+    Для начала анализа текстов загрузите файл:
+    </div>
+    <br>
+    <form action='http://localhost:5000/uploader' method='post' enctype="multipart/form-data">
+        <center><input type="file" name="file">
+            <button type="submit">Отправить</button></center>
+    </form>
+</body>
+</html>
+
+
