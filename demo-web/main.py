@@ -28,4 +28,4 @@ def upload_file():
    return render_template('results.html', proba = proba, whether_dup = whether_dup)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=80)
