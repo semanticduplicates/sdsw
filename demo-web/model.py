@@ -199,7 +199,7 @@ def features(df, result):
     	# по той или иной части речи. На вход поступает колонка датафрейма.
 
         # создаем columns, которому присваиваем значения от 0 до 14
-        columns = [np.arange(15)]
+        columns = np.arange(15)
         # создаем три датафрема с колонками из columns, количество строк определено количеством 	строк датафрема result
         df_class1 = pd.DataFrame(columns=columns, index=np.arange(result.shape[0]))
         df_class2 = pd.DataFrame(columns=columns, index=np.arange(result.shape[0]))
