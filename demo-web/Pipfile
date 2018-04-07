@@ -12,6 +12,7 @@ nltk = "*"
 "pymystem3" = "*"
 sklearn = "*"
 scipy = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "2.7"
