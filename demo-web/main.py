@@ -1,10 +1,15 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 from model import form_dataset, mystem_combined, obrabotka, features, classifier
 app = Flask(__name__)
+
 @app.route('/')
 def hello_world():
     return render_template('index.html')
+
+@app.route('/.well-known/acme-challenge/<path:path>', methods=['GET'])
+def return_file(path):
+    return send_from_directory('.well-known/acme-challenge', path)
 
 @app.route('/', methods=['POST', 'GET'])
 def upload_file():
