@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Сравнить тексты</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+	<title>Семантический анализ текстов</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset='UTF-8'> 
+	<link href="/static/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="headings" align="center">
-    <h1>Поиск смысловых дубликатов</h1><br>
-    Для начала анализа вставьте тексты:
-    </div>
-    <br>
-    <form action='/' method='post' enctype="multipart/form-data">
-        <textarea name="text1" rows=10 cols=50 class="leftcol"></textarea>
-        <textarea name="text2" rows=10 cols=50 class="rightcol"></textarea>
-     <button type="submit" class="submit">Проверить</button></center>
-    </form>
+<nav class="navbar navbar-default" role="navigation">
+	<ul class="nav navbar-nav">
+		<li class="active"><a href="/home/">Сравнить тексты</a></li>
+		<li><a href="/about/">О проекте</a></li>
+		<li><a href="/contact/">Контакты</a></li>			
+	</ul>
+</nav>
+</nav>
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-384">
+			<center><h1>Поиск смысловых дубликатов</h1><br>
+			<h4>Для начала анализа вставьте тексты:</h4></center><br>
+		</div>
+		<form action='/' method='post' enctype="multipart/form-data">
+
+		<div class="col-md-128 col-md-offset-72">
+			<text name="text1" rows=10 cols=50></text>
+		</div>
+		<div class="col-md-160">
+			<text name="text2" rows=10 cols=50></text>
+		<br>
+		</div>
+		<div class="col-md-offset-210">
+			<button type="submit" class="btn btn-primary">Проверить</button>
+		</div>
+		</div>
+		</form>
+	</div>
+</div>
 </body>
 </html>
+{% endblock %}
 
 
