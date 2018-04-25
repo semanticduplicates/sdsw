@@ -2,14 +2,10 @@
 from flask import Flask, render_template, request, send_from_directory
 from model import form_dataset, mystem_combined, obrabotka, features, classifier
 app = Flask(__name__)
-
 @app.route('/')
 def hello_world():
-    return render_template('index.html')
-
-@app.route('/.well-known/acme-challenge/<path:path>', methods=['GET'])
-def return_file(path):
-    return send_from_directory('.well-known/acme-challenge', path)
+   visible = False
+   return render_template('index.html')
 
 @app.route('/', methods=['POST', 'GET'])
 def upload_file():
@@ -30,7 +26,8 @@ def upload_file():
       else:
           whether_dup = u'не являются'
           proba = round(predictions[0][0]*100, 2)
-   return render_template('results.html', proba = proba, whether_dup = whether_dup)
+      visible = True
+   return render_template('index.html', visible = visible, proba = proba, whether_dup = whether_dup)
 
 if __name__ == '__main__':
     import nltk
