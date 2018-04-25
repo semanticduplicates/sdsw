@@ -3,7 +3,8 @@
 <head>
 	<title>Семантический анализ текстов</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset='UTF-8'> 
-	<link href="/static/css/style.css" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/variables.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
@@ -20,28 +21,25 @@
 <br>
 <br>
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-384">
-			<center><h1>Поиск смысловых дубликатов</h1><br>
-			<h4>Для начала анализа вставьте тексты:</h4></center><br>
+	<div class="form-row">
+		<div class="col-md-260 col-md-offset-55">
+			<center><h1>Поиск смысловых дубликатов</h1></center><br>
+			<center><h4>Для начала анализа вставьте тексты:</h4></center><br>
 		</div>
 		<form action='/' method='post' enctype="multipart/form-data">
 
-		<div class="col-md-128 col-md-offset-72">
-			<textarea name="text1" rows=10 cols=50></textarea>
+		<div class="form-group col-md-107 col-md-offset-77 col-sm-107 col-sm-offset-80 col-xs-offset-10">
+			<textarea name="text1" class="form-control" rows=10 placeholder="Текст 1"></textarea>
 		</div>
-		<div class="col-md-160">
-			<textarea name="text2" rows=10 cols=50></textarea>
-		<br>
-		<div class="col-md-offset-210">
-			<button type="submit" class="btn btn-primary">Проверить</button>
+		<div class="form-group col-md-107 col-sm-107 col-xs-offset-10">
+			<textarea name="text2" class="form-control" rows=10 placeholder="Текст 2"></textarea>
+		<div class="form-group col-md-offset-210 col-sm-offset-210">
+			<button type="submit" class="btn btn-primary btn-md btn-block">Проверить</button>
 		</div>
 		</div>
 		</form>
 	</div>
 </div>
+{% endblock %}
 </body>
 </html>
-{% endblock %}
-
-
