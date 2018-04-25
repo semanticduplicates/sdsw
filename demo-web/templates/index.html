@@ -3,19 +3,18 @@
 <head>
 	<title>Семантический анализ текстов</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset='UTF-8'> 
-<link href="{{ url_for('static', filename='css/variables.css') }}" rel="stylesheet">
-<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 <body>
+{% block content %}
 <nav class="navbar navbar-default" role="navigation">
 	<ul class="nav navbar-nav">
-		<li class="active"><a href="/home/">Сравнить тексты</a></li>
+		<li class="active"><a href="/">Сравнить тексты</a></li>
 		<li><a href="/about/">О проекте</a></li>
 		<li><a href="/contact/">Контакты</a></li>			
 	</ul>
 </nav>
 </nav>
-{% block content %}
 <br>
 <br>
 <br>
@@ -24,7 +23,7 @@
 	<div class="form-row">
 		<div class="col-md-260 col-md-offset-55">
 			<center><h1>Поиск смысловых дубликатов</h1></center><br>
-			<center><h4>Для начала анализа вставьте тексты:</h4></center><br>
+			<center><h4>Для начала анализа вставьте тексты (5-7 строк):</h4></center><br>
 		</div>
 		<form action='/' method='post' enctype="multipart/form-data">
 			<div class="form-group col-md-107 col-md-offset-77 col-sm-107 col-sm-offset-80 col-xs-offset-10">
