@@ -457,6 +457,9 @@ h6,
 }
 p {
   margin: 0 0 8.5px;
+  text-indent: 20px;
+  text-align: justify;
+  line-height: 1.5;
 }
 .lead {
   margin-bottom: 17px;
@@ -23676,6 +23679,7 @@ td.visible-print {
     display: none !important;
   }
 }
+
 /*серый фон страницы*/
 /*специфический голубой фон данного дизайна*/
 /*фон панелей*/
