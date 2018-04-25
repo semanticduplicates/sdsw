@@ -5,6 +5,8 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
    visible = False
+   f1 = ''
+   f2 = ''
    return render_template('index.html')
 
 @app.route('/', methods=['POST', 'GET'])
@@ -27,7 +29,7 @@ def upload_file():
           whether_dup = u'не являются'
           proba = round(predictions[0][0]*100, 2)
       visible = True
-   return render_template('index.html', visible = visible, proba = proba, whether_dup = whether_dup)
+   return render_template('index.html', visible = visible, proba = proba, whether_dup = whether_dup, f1 = f1, f2 = f2)
 
 @app.route('/about/')
 def about():
